@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.SignalR.Protocol;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,6 +22,7 @@ namespace aspcorer.hubs
 
 		public override async Task OnConnectedAsync()
 		{
+            Debug.WriteLine("On Connected");
 			await Welcome();
 			await base.OnConnectedAsync();
 
