@@ -17,6 +17,7 @@ namespace aspcorer.hubs
 
 		public async Task Welcome()
 		{
+            Debug.WriteLine("Call Welcome");
 			await Clients.All.SendAsync("welcome", new[] { new HubMessage(), new HubMessage(), new HubMessage() });
 		}
 
